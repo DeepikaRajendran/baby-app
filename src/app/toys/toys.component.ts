@@ -8,10 +8,25 @@ import {Toy} from '../toy';
 })
 export class ToysComponent implements OnInit {
 
-  toy: Toy = {
+  toys: Toy[] = [
+    {
     name: 'Teddy Bear',
     color: 'Brown'
-  };
+  },
+  {
+    name: 'Elephant',
+    color: 'Black'
+  },
+  {
+    name: 'Baby Doll',
+    color: 'Pink'
+  },
+  {
+    name: 'Duck',
+    color: 'Yellow'
+  }
+  
+];
 
   constructor() { }
 

@@ -1,3 +1,7 @@
-<p>
-  {{ toy.color}} {{toy.name}} 
-</p>
+<h2>My favorite toy is: {{toys[0].name}}</h2>
+<p>Toys:</p>
+<ul>
+  <li *ngFor="let toy of toys">
+    {{toy.color}} {{ toy.name }}
+  </li>
+</ul>

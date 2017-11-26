@@ -1,4 +1,4 @@
 export class Toy {
-    name: string,
+    name: string;
     color: string
 }
