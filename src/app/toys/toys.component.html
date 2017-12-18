@@ -1,7 +1,10 @@
 <h2>My favorite toy is: {{toys[0].name}}</h2>
+<input [(ngModel)]="toy.name" placeholder = "Toy Name" />
+<input [(ngModel)]="toy.color" placeholder = "Toy Color" />
+<button (click) = "addToy()" > Add </button>
 <p>Toys:</p>
 <ul>
-  <li *ngFor="let toy of toys">
-    {{toy.color}} {{ toy.name }}
+  <li *ngFor="let toy of toys | slice:1:3">
+    {{toy.color}} {{ toy.name | titlecase}}
   </li>
 </ul>

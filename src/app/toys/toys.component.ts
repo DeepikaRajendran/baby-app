@@ -7,7 +7,7 @@ import {Toy} from '../toy';
   styleUrls: ['./toys.component.css']
 })
 export class ToysComponent implements OnInit {
-
+  
   toys: Toy[] = [
     {
     name: 'Teddy Bear',
@@ -27,10 +27,16 @@ export class ToysComponent implements OnInit {
   }
   
 ];
+  toy : Toy = new Toy();
 
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  addToy(){
+    this.toys.push(this.toy);
   }
 
 }
