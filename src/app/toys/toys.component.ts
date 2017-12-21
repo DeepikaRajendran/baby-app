@@ -7,7 +7,8 @@ import {Toy} from '../toy';
   styleUrls: ['./toys.component.css']
 })
 export class ToysComponent implements OnInit {
-  
+  myAwesomeText: string;
+  filter: string;
   toys: Toy[] = [
     {
     name: 'Teddy Bear',
