@@ -7,6 +7,7 @@ import {Toy} from '../toy';
   styleUrls: ['./toys.component.css']
 })
 export class ToysComponent implements OnInit {
+  
   myAwesomeText: string;
   filter: string;
   toys: Toy[] = [
@@ -16,11 +17,11 @@ export class ToysComponent implements OnInit {
   },
   {
     name: 'Elephant',
-    color: 'Black'
+    color: 'Grey'
   },
   {
     name: 'Baby Doll',
-    color: 'Pink'
+    color: 'Magenta'
   },
   {
     name: 'Duck',
@@ -30,12 +31,11 @@ export class ToysComponent implements OnInit {
 ];
   toy : Toy = new Toy();
 
-  constructor() { }
-
-  ngOnInit() {
+   ngOnInit() {
 
   }
 
+ 
   addToy(){
     this.toys.push(this.toy);
   }

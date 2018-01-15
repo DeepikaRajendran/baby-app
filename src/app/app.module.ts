@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ToysComponent } from './toys/toys.component';
 
 import { ColorPipe } from './toys/color.pipe';
-import { HighLightPipe} from './toys/highlight.pipe';
 
 
 @NgModule({

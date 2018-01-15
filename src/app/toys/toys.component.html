@@ -4,7 +4,7 @@
 <button (click) = "addToy()" > Add </button>
 <p>Toys:</p>
 <ul>
-  <li *ngFor="let toy of toys | slice:1:3">
-    <span>{{toy.color | color: toy.color}}</span>
+  <li *ngFor="let toy of toys">
+    <div [innerHTML]="toy| color"></div> 
   </li> 
 </ul>
