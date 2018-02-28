@@ -1,3 +1,17 @@
-h1{
-    color: violet;
+h1 {
+  color: violet;
+}
+
+md-card {
+  width: 50px !important;
+  margin: 4px;
+}
+
+#card-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.space {
+  flex: 1 1 auto;
 }

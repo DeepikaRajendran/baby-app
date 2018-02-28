@@ -1,4 +1,4 @@
-<h2>My favorite toy is: {{toys[0].name}}</h2>
+<!-- <h2>My favorite toy is: {{toys[0].name}}</h2>
 <input [(ngModel)]="toy.name" placeholder = "Toy Name" />
 <input [(ngModel)]="toy.color" placeholder = "Toy Color" />
 <button (click) = "addToy()" > Add </button>
@@ -7,4 +7,23 @@
   <li *ngFor="let toy of toys">
     <div [innerHTML]="toy| color"></div> 
   </li> 
-</ul>
+</ul> -->
+<mat-card>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Enter baby's Favorite toy" name="toyName" [(ngModel)]="toy.name" />           
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Toy Color" name="toyColor" [(ngModel)]="toy.color" />
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="accent" (click)="addToy()"> Add toy</button>
+  </form>
+</mat-card>
+<mat-card>
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let toy of toys">
+      <div [innerHTML]="toy| color"></div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
