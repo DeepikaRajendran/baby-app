@@ -6,6 +6,7 @@ import {
 } from '../toy';
 
 import { ToysService } from '../toys.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-toys',
@@ -17,9 +18,15 @@ export class ToysComponent implements OnInit {
   toy: Toy = new Toy();
   toys: Toy[];
 
-  constructor(private toysService: ToysService) {  }
+  constructor(private toysService: ToysService, private route:ActivatedRoute) { 
+
+   }
 
   ngOnInit() {
+    
+    this.route.params.subscribe(params => {
+      console.log(params["id"]);
+    });
     this.toysService.getToys().subscribe(data => {
       this.toys = data;
     });  

@@ -1,8 +1,10 @@
 <mat-toolbar color="accent">
-  <span>Toys</span>
-  <!-- This fills the remaining space of the current row -->
+  <mat-icon>child_care</mat-icon>  
+  <a mat-button routerLink="/"> Dashboard</a>
+  <a mat-button routerLink="/toys"> Toys</a>
   <span class="space"></span>
-  <mat-icon>favorite</mat-icon>
 </mat-toolbar>
 
-<app-toys></app-toys>
+<!-- <app-toys></app-toys> -->
+<router-outlet></router-outlet>
+ 

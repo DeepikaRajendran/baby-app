@@ -6,19 +6,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
-
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ToysComponent } from './toys/toys.component';
 
 import { ColorPipe } from './toys/color.pipe';
 import { ToysService } from './toys.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
+
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'prefix'},
+  { path: 'home', component: DashboardComponent },
+  { path:'toys/:id', component: ToysComponent },
+  { path:'toys', component: ToysComponent },
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     ToysComponent,
-    ColorPipe
+    ColorPipe,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,8 @@ import { ToysService } from './toys.service';
     MatGridListModule,
     FlexLayoutModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [ColorPipe, ToysService],
   bootstrap: [AppComponent]
